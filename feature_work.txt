@@ -1,0 +1,13 @@
+difference between requested and funded amount
+percent investor funded
+?does missing months mean they never were delinquent, or that they didn't record it
+   perhaps kmeans 
+scale/normalize columns
+
+
+binarized number of payments ("36 months" or "60 months")
+vectorize load grade and subgrade
+vectorize home ownership
+vectorize income verification
+vectorize loan category
+vectorize state of borrower
