@@ -8,7 +8,7 @@ for name in friends:
     if 'a' in name:       #changed a to a string instead of undeclared variable
         count_a += 1      #python is silly and doesn't have increment operators     
 
-print "%2.1f percent of the names contain an 'a'" % ( count_a / len(friends) * 100)
+print "%.1f percent of the names contain an 'a'" % ( count_a / len(friends) * 100)
 #changed formatting of percent so
 #a) it is a percent, not a decimal
 #b) rounds to one decimal
