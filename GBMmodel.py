@@ -1,6 +1,5 @@
 import numpy as np
 from sklearn import cross_validation
-from sklearn.decomposition import KernelPCA
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn import grid_search
 from sklearn.externals import joblib
@@ -8,7 +7,6 @@ from sklearn.externals import joblib
 # Load data from numpy array 
 data_trans = np.load('C:\\Users\\Jacqueline\\Documents\\Dropbox\\SFworksample\\data\\clean_data.npy')
 data_labels = np.load('C:\\Users\\Jacqueline\\Documents\\Dropbox\\SFworksample\\data\\clean_labels.npy')
-hold_trans = np.load('C:\\Users\\Jacqueline\\Documents\\Dropbox\\SFworksample\\data\\clean_holdout.npy')
 
 # Split training and test set
 data_train, data_test, label_train, label_test = \
@@ -57,5 +55,6 @@ gbr = clf.best_estimator_
 pred = gbr.predict(trim_test)
 rmse = rmse(pred, label_test)
 
-joblib.dump(gbr, 'C:\\Users\\Jacqueline\\Documents\\Dropbox\\SFworksample\\models\\gbr.z')
+# Save model and other important info
+joblib.dump(gbr, 'C:\\Users\\Jacqueline\\Documents\\Dropbox\\SFworksample\\models\\gbr.pkl')
 np.save('C:\\Users\\Jacqueline\\Documents\\Dropbox\\SFworksample\\models\\gbr_features.npy', use_feature)
